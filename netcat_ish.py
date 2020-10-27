@@ -14,18 +14,19 @@ upload_destination      = ""
 port                    = 0  
 
 def usage():
-    print ("[...]Netcat-ish @Tony Tools[...]\n")
-    print ("Usage: netcat-ish.py -t target -p  port")
-    print ("-l --listen                 - listen on [host]:[port] for incoming connection")
-    print ("-e --execute=file_to_run    - execute the given file upon connection")
-    print ("-c --command                - init a command shell")
-    print ("-u --upload=destination     - upon connection, upload a file & write to [dest]\n")
-    print ("Examples:[-->]")
+    print ("""\
+        [...]Netcat-ish @Tony Tools[...]
+        Usage: netcat-ish.py -t target -p  port
+        -l --listen                 - listen on [host]:[port] for incoming connection
+        -e --execute=file_to_run    - execute the given file upon connection
+        -c --command                - init a command shell
+        -u --upload=destination     - upon connection, upload a file & write to [dest]
+        Examples:[-->]")
 
-    print ("netcat-ish.py -t 192.168.142.100 -p 4545 -l -c:")
-    print ("netcat-ish.py -l -t 192.167.100.1 -p 444 -u=c:\\target.exe")
-    print ("netcat-ish.py =t 198.192.100.14 -p 447 -l -e ")
-    print ("echo 'ABCDEFGHI' | python netcat-ish.py -t 192.168.11.14 -p 135")
+        netcat-ish.py -t 192.168.142.100 -p 4545 -l -c:
+        netcat-ish.py -l -t 192.167.100.1 -p 444 -u=c:\\target.exe
+        netcat-ish.py =t 198.192.100.14 -p 447 -l -e 
+        echo 'ABCDEFGHI' | python netcat-ish.py -t 192.168.11.14 -p 135""")
 
     sys.exit(0)
 
